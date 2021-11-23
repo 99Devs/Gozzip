@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import {main} from "../scripts/client";
 
 export default class AppContainer extends Component {
+    
+    componentDidMount(){
+    main()
+};
     render() {
         return (
             <div>

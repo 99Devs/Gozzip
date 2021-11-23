@@ -1,4 +1,5 @@
-const initUI = () => {
+import VoxeetSDK from "@voxeet/voxeet-web-sdk";
+export const initUI = (randomName) => {
     const nameMessage = document.getElementById('name-message');
     const joinButton = document.getElementById('join-btn');
     const conferenceAliasInput = document.getElementById('alias-input');
@@ -171,88 +172,34 @@ const initUI = () => {
   };
   
   // Add a video stream to the web page
-  const addVideoNode = (participant, stream) => {
-    let videoNode = document.getElementById('video-' + participant.id);
-  
-    if (!videoNode) {
-      videoNode = document.createElement('video');
-  
-      videoNode.setAttribute('id', 'video-' + participant.id);
-      videoNode.setAttribute('height', 240);
-      videoNode.setAttribute('width', 320);
-      videoNode.setAttribute("playsinline", true);
-      videoNode.muted = true;
-      videoNode.setAttribute("autoplay", 'autoplay');
-      videoNode.style = 'background: gray;';
-  
-      const videoContainer = document.getElementById('video-container');
-      videoContainer.appendChild(videoNode);
-    }
-  
-    navigator.attachMediaStream(videoNode, stream);
-  };
-  
   // Remove the video streem from the web page
-  const removeVideoNode = (participant) => {
-    let videoNode = document.getElementById('video-' + participant.id);
+  // const removeVideoNode = (participant) => {
+  //   let videoNode = document.getElementById('video-' + participant.id);
   
-    if (videoNode) {
-      videoNode.srcObject = null; // Prevent memory leak in Chrome
-      videoNode.parentNode.removeChild(videoNode);
-    }
-  };
+  //   if (videoNode) {
+  //     videoNode.srcObject = null; // Prevent memory leak in Chrome
+  //     videoNode.parentNode.removeChild(videoNode);
+  //   }
+  // };
   
   // Add a new participant to the list
-  const addParticipantNode = (participant) => {
-    // If the participant is the current session user, don't add them to the list
-    if (participant.id === VoxeetSDK.session.participant.id) return;
+  // const addParticipantNode = (participant) => {
+  //   // If the participant is the current session user, don't add them to the list
+  //   if (participant.id === VoxeetSDK.session.participant.id) return;
   
-    let participantNode = document.createElement('li');
-    participantNode.setAttribute('id', 'participant-' + participant.id);
-    participantNode.innerText = `${participant.info.name}`;
+  //   let participantNode = document.createElement('li');
+  //   participantNode.setAttribute('id', 'participant-' + participant.id);
+  //   participantNode.innerText = `${participant.info.name}`;
   
-    const participantsList = document.getElementById('participants-list');
-    participantsList.appendChild(participantNode);
-  };
+  //   const participantsList = document.getElementById('participants-list');
+  //   participantsList.appendChild(participantNode);
+  // };
   
   // Remove a participant from the list
-  const removeParticipantNode = (participant) => {
-    let participantNode = document.getElementById('participant-' + participant.id);
-  
-    if (participantNode) {
-      participantNode.parentNode.removeChild(participantNode);
-    }
-  };
   
   // Add a screen share stream to the web page
-  const addScreenShareNode = (stream) => {
-    let screenShareNode = document.getElementById('screenshare');
-  
-    if (screenShareNode) {
-      return alert('There is already a participant sharing a screen!');
-    }
-  
-    screenShareNode = document.createElement('video');
-    screenShareNode.setAttribute('id', 'screenshare');
-    screenShareNode.autoplay = 'autoplay';
-    navigator.attachMediaStream(screenShareNode, stream);
-  
-    const screenShareContainer = document.getElementById('screenshare-container');
-    screenShareContainer.appendChild(screenShareNode);
-  }
-  
+
+
+
+
   // Remove the screen share stream from the web page
-  const removeScreenShareNode = () => {
-    let screenShareNode = document.getElementById('screenshare');
-  
-    if (screenShareNode) {
-      screenShareNode.srcObject = null; // Prevent memory leak in Chrome
-      screenShareNode.parentNode.removeChild(screenShareNode);
-    }
-    
-    const startScreenShareBtn = document.getElementById('start-screenshare-btn');
-    startScreenShareBtn.disabled = false;
-    
-    const stopScreenShareBtn = document.getElementById('stop-screenshare-btn');
-    stopScreenShareBtn.disabled = true;
-  }

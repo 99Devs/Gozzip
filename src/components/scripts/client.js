@@ -10,20 +10,8 @@ import { initUI } from "./ui.js";
 
 const CONSUMER_KEY = "add your api key";
 const CONSUMER_SECRET = "add your secret key";
-alert("hi");
-const avengersNames = [
-  "Thor",
-  "Cap",
-  "Tony Stark",
-  "Black Panther",
-  "Black Widow",
-  "Hulk",
-  "Spider-Man",
-];
-let randomName =
-  avengersNames[Math.floor(Math.random() * avengersNames.length)];
 
-export const main = async () => {
+export const main = async (randomName) => {
   /* Event handlers */
 
   // When a stream is added to the conference

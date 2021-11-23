@@ -3,11 +3,34 @@ import {main} from "../scripts/client";
 
 export default class AppContainer extends Component {
     
-    componentDidMount(){
-    main()
-};
+    // componentDidMount(){
+    //     main()
+    // };
+
+    state = {
+        name: "",
+        showHome: true,
+    }
+
+    handleSubmit = () => {
+        main(this.state.name);
+        this.setState({showHome: false});
+    }
+    
     render() {
-        return (
+        
+        return (this.state.showHome?(
+        <div>
+            <h1>Gozzip</h1>
+            <form onSubmit={this.handleSubmit}>
+                <div>
+                    <p>Enter your name</p>
+                    <input required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
+                </div>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+        ):(
             <div>
                 Gozzip
                 <div id="app">
@@ -52,6 +75,6 @@ export default class AppContainer extends Component {
         <div id="screenshare-container"></div>
     </div>
             </div>
-        )
+        ))
     }
 }

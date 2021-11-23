@@ -8,8 +8,8 @@ import { removeParticipantNode } from "./removeParticipantNode";
 import { addVideoNode } from "./addVideoNode";
 import { initUI } from "./ui.js";
 
-const CONSUMER_KEY = "PpzQpRbuvzm5LNZrREIEpA==";
-const CONSUMER_SECRET = "SvNZ57n-4iJdsONu_Rp-7_BQRS-vG-ZIKjgcy5HKAzk=";
+const CONSUMER_KEY = "add your api key";
+const CONSUMER_SECRET = "add your secret key";
 alert("hi");
 const avengersNames = [
   "Thor",

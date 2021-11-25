@@ -10,6 +10,7 @@ export default class AppContainer extends Component {
     state = {
         name: "",
         showHome: true,
+        meetingCode: "",
     }
 
     handleSubmit = () => {
@@ -26,6 +27,9 @@ export default class AppContainer extends Component {
                 <div>
                     <p>Enter your name</p>
                     <input required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
+                    <p>Create/Enter Meeting Code</p>
+                    <input required type="text" value={this.state.meetingCode} onChange={(event)=>{this.setState({meetingCode: event.target.value})}} />
+                    <br/><br/>
                 </div>
                 <input type="submit" value="Submit" />
             </form>
@@ -39,7 +43,7 @@ export default class AppContainer extends Component {
         {/* <!-- Join or Leave a Conference --> */}
         <div id="form">
             <label>Conference alias :</label>
-            <input id="alias-input" value="Avengers meeting" />
+            <input id="alias-input" value={this.state.meetingCode} />
             <button id="join-btn" disabled>Join</button>
             <button id="leave-btn" disabled>Leave</button>
             <label id="label-dolby-voice"></label>

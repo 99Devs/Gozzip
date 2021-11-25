@@ -8,12 +8,11 @@ import { removeParticipantNode } from "./removeParticipantNode";
 import { addVideoNode } from "./addVideoNode";
 import { initUI } from "./ui.js";
 
-const CONSUMER_KEY = "add your api key";
-const CONSUMER_SECRET = "add your secret key";
+const CONSUMER_KEY = process.env.REACT_APP_CONSUMER_KEY;
+const CONSUMER_SECRET = process.env.REACT_APP_CONSUMER_SECRET;
 
 export const main = async (randomName) => {
   /* Event handlers */
-
   // When a stream is added to the conference
   VoxeetSDK.conference.on("streamAdded", (participant, stream) => {
     if (stream.type === "ScreenShare") {

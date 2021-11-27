@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {main} from "../scripts/client";
 
+import { Icon } from 'semantic-ui-react'
 export default class AppContainer extends Component {
     
     // componentDidMount(){
@@ -53,8 +54,13 @@ export default class AppContainer extends Component {
         <div id="actions">
             <button id="start-video-btn" disabled>Start video</button>
             <button id="stop-video-btn" disabled>Stop video</button>
-            <button id="start-audio-btn" disabled>Start audio</button>
-            <button id="stop-audio-btn" disabled>Stop audio</button>
+            <button id="start-audio-btn" disabled>
+                
+            <Icon  name='microphone' />
+               </button>
+
+          
+            <button id="stop-audio-btn" disabled>  <Icon name='microphone slash' /></button>
             <button id="start-screenshare-btn" disabled>Start screen share</button>
             <button id="stop-screenshare-btn" disabled>Stop screen share</button>
         </div>

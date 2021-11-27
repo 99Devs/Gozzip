@@ -1,4 +1,5 @@
 import VoxeetSDK from "@voxeet/voxeet-web-sdk";
+
 export const initUI = (randomName) => {
     const nameMessage = document.getElementById('name-message');
     const joinButton = document.getElementById('join-btn');

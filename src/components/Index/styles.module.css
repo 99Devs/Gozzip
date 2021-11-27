@@ -1,0 +1,45 @@
+.parent {
+  font-family: "Courier New", "Courier", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 10px;
+}
+
+.heading {
+  top: 12px;
+  position: relative;
+  font-size: xxx-large;
+  color: #4671b5;
+}
+
+.para {
+  color: black;
+  font-size: medium;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.input {
+  width: 232px;
+  padding: 3px;
+  margin-bottom: 16px;
+  border-radius: 7px;
+  border: 2px solid #713333;
+  background-color: seashell;
+}
+
+.done {
+  background-color: #adb9a85c;
+  border: 2px solid black;
+  color: black;
+  padding: 11px 26px;
+  margin: -9px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import {main} from "../scripts/client";
 
+import classes from './styles.module.css';
 import { Icon } from 'semantic-ui-react'
+
 export default class AppContainer extends Component {
     
     // componentDidMount(){
@@ -22,17 +24,17 @@ export default class AppContainer extends Component {
     render() {
         
         return (this.state.showHome?(
-        <div>
-            <h1>Gozzip</h1>
+        <div className={classes.parent}>
+            <h1 className={classes.heading}>Gozzip</h1>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <p>Enter your name</p>
-                    <input required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
-                    <p>Create/Enter Meeting Code</p>
-                    <input required type="text" value={this.state.meetingCode} onChange={(event)=>{this.setState({meetingCode: event.target.value})}} />
+                    <p className={classes.para}>Enter your name</p>
+                    <input className={classes.input} placeholder="UserName" required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
+                    <p className={classes.para}>Create/Enter Meeting Code</p>
+                    <input className={classes.input} placeholder="Meeting Code" required type="text" value={this.state.meetingCode} onChange={(event)=>{this.setState({meetingCode: event.target.value})}} />
                     <br/><br/>
                 </div>
-                <input type="submit" value="Submit" />
+                <input className={classes.done} type="submit" value="Submit" />
             </form>
         </div>
         ):(

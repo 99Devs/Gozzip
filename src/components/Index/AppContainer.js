@@ -1,40 +1,11 @@
 import React, { Component } from 'react'
 import {main} from "../scripts/client";
 
-import { withStyles } from "@material-ui/core/styles";
-import { Container, AppBar, Typography, TextField, Button } from '@material-ui/core';
-// import { styles } from './styles';
-  
-
-const styles = theme => ({
-  root: {
-    backgroundColor: "red"
-    },
-    container: {
-        padding: "132px 43px 103px 32px",
-    },
-    appBar: {
-        borderRadius: 30,
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: '#21557C;'
-    },
-    heading: {
-        color: 'rgb(199, 211, 215)'
-    },
-
-});
-
-
-class AppContainer extends Component {
+export default class AppContainer extends Component {
     
-
-    
-    componentDidMount(){
-        main()
-    };
+    // componentDidMount(){
+    //     main()
+    // };
 
     state = {
         name: "",
@@ -48,29 +19,21 @@ class AppContainer extends Component {
     }
     
     render() {
-        const { classes } = this.props;
-
+        
         return (this.state.showHome?(
-            
-            <Container maxWidth="xs" className={classes.container}>
+        <div>
+            <h1>Gozzip</h1>
+            <form onSubmit={this.handleSubmit}>
                 <div>
-                    <AppBar position="relative" color="primary" className={classes.appBar} gutterBottom>
-                        <Typography variant="h2" align="center" className={classes.heading}>Gozzip</Typography>
-                    </AppBar>
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <Typography variant="h5" align="center" gutterBottom>Enter your name</Typography>
-                            <TextField id="filled-basic" label="UserName" variant="filled"  gutterBottom/>
-                            <Typography variant="h5" align="center" gutterBottom >Create/Enter meeting code</Typography>
-                            <TextField id="filled-basic" label="Meeting Code" variant="filled" gutterBottom />
-                            <br/><br/>
-                        </div>
-                        
-                        <Button variant="contained" type="submit" color="secondary">Submit</Button>
-
-                    </form>
-                    </div>
-            </Container>
+                    <p>Enter your name</p>
+                    <input required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
+                    <p>Create/Enter Meeting Code</p>
+                    <input required type="text" value={this.state.meetingCode} onChange={(event)=>{this.setState({meetingCode: event.target.value})}} />
+                    <br/><br/>
+                </div>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
         ):(
             <div>
                 Gozzip
@@ -119,14 +82,3 @@ class AppContainer extends Component {
         ))
     }
 }
-export default withStyles(styles)(AppContainer);
-
-
-
-
-
-
-
-
- // <input required type="text" value={this.state.name} onChange={(event)=>{this.setState({name: event.target.value})}} />
-// <input required type="text" value={this.state.meetingCode} onChange={(event)=>{this.setState({meetingCode: event.target.value})}} />

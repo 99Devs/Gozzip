@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { main } from "../scripts/client";
-
+import moment from 'moment';
 import classes from "./styles.module.css";
 import { Icon } from "semantic-ui-react";
-
+import {Menu} from 'semantic-ui-react';
 export default class AppContainer extends Component {
   // componentDidMount(){
   //     main()
@@ -23,7 +23,20 @@ export default class AppContainer extends Component {
   render() {
     return this.state.showHome ? (
       <div className={classes.parent}>
-        <h1 className={classes.heading}>Gozzip</h1>
+          <Menu className={classes.menu} secondary>
+ <Menu.Item
+          name='Gozzip'
+          
+          onClick={this.handleItemClick}
+        />
+           <Menu.Menu  position='right'>
+        <Menu.Item className={classes.date}
+         name={moment().format('MMMM Do YYYY, h:mm:ss a')} 
+         position="right"
+            onClick={this.handleItemClick}
+          /></Menu.Menu>
+          </Menu>
+        <h1 className={classes.heading}><Icon name="conversation"/>Gozzip</h1>
         <form onSubmit={this.handleSubmit}>
           <div>
             <p className={classes.para}>Enter your name</p>

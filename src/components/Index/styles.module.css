@@ -9,17 +9,26 @@
   margin-left: -200px;
   border-radius: 10px;
 }
-
+.date{
+  position:relative;
+  left:444%;
+}
+.menu{
+  top: 0;
+  left: 0;
+  position:fixed;
+}
 .heading {
   top: 12px;
   position: relative;
   font-size: xxx-large;
   color: #4671b5;
+  margin-bottom:20px;
 }
 
 .para {
   color: black;
-  font-size: medium;
+  font-size: large;
   font-style: italic;
   font-weight: bolder;
 }

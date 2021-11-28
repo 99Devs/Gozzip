@@ -17,7 +17,7 @@
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
+
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
@@ -25,36 +25,37 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-.date{
-  position:relative;
-  left:444%;
+.date {
+  position: relative;
+  left: 444%;
 }
-.menu{
+.menu {
   top: 0;
   left: 0;
-  position:fixed;
+  position: fixed;
 }
 .heading {
   top: 12px;
   position: relative;
   font-size: xxx-large;
   color: #4671b5;
-  margin-bottom:20px;
+  margin-bottom: 30px;
 }
 
 .para {
   color: black;
   font-size: large;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: bolder;
 }
 
 .input {
-  width: 232px;
-  padding: 3px;
+  width: 300px;
+  height: 30px;
+  padding: 8px;
   margin-bottom: 16px;
   border-radius: 7px;
-  border: 2px solid #713333;
+  border: 2px solid #4671b5;
   background-color: seashell;
 }
 
@@ -65,6 +66,6 @@
   padding: 11px 26px;
   margin: -9px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
 }

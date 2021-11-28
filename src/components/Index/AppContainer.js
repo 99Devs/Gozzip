@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { main } from "../scripts/client";
-import moment from 'moment';
 import classes from "./styles.module.css";
 import { Icon } from "semantic-ui-react";
-import {Menu} from 'semantic-ui-react';
 export default class AppContainer extends Component {
   // componentDidMount(){
   //     main()
@@ -23,20 +21,10 @@ export default class AppContainer extends Component {
   render() {
     return this.state.showHome ? (
       <div className={classes.parent}>
-          <Menu className={classes.menu} secondary>
- <Menu.Item
-          name='Gozzip'
-          
-          onClick={this.handleItemClick}
-        />
-           <Menu.Menu  position='right'>
-        <Menu.Item className={classes.date}
-         name={moment().format('MMMM Do YYYY, h:mm:ss a')} 
-         position="right"
-            onClick={this.handleItemClick}
-          /></Menu.Menu>
-          </Menu>
-        <h1 className={classes.heading}><Icon name="conversation"/>Gozzip</h1>
+        <h1 className={classes.heading}>
+          <Icon name="conversation" />
+          Gozzip
+        </h1>
         <form onSubmit={this.handleSubmit}>
           <div>
             <p className={classes.para}>Enter your name</p>
@@ -64,7 +52,7 @@ export default class AppContainer extends Component {
             <br />
             <br />
           </div>
-          <input className={classes.done} type="submit" value="Submit" />
+          <input className={classes.done} type="submit" value="Join" />
         </form>
       </div>
     ) : (
@@ -95,7 +83,10 @@ export default class AppContainer extends Component {
               color: "#4671b5",
             }}
           >
-            Meeting Id:<b>#{this.state.meetingCode}</b>
+            Meeting Id:
+            <u>
+              <b>#{this.state.meetingCode}</b>
+            </u>
           </div>
         </div>
 
@@ -103,10 +94,16 @@ export default class AppContainer extends Component {
           <div style={{ float: "left", width: "80%" }}>
             {/* <!-- Display the list of participants --> */}
             <div id="participants">
-              <h3>
-                <span class="material-icons">people_outline</span>Participants
-              </h3>
-              <ul id="participants-list"></ul>
+              <h3>Participants</h3>
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+                id="participants-list"
+              ></div>
               {/* <!-- Container for the video streams --> */}
               <div id="video-container"></div>
 
@@ -131,7 +128,7 @@ export default class AppContainer extends Component {
                   <span className={classes.tooltiptext}>join video call</span>
                 </button>
 
-                <button className={classes.tooltip}id="leave-btn" disabled>
+                <button className={classes.tooltip} id="leave-btn" disabled>
                   <span class="material-icons">call_end</span>
 
                   <span className={classes.tooltiptext}>Leave video call</span>
@@ -141,36 +138,61 @@ export default class AppContainer extends Component {
 
               {/* <!-- Actions on Video and Screen Share --> */}
               <div id="actions">
-                <button className={classes.tooltip}id="start-video-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="start-video-btn"
+                  disabled
+                >
                   <span class="material-icons">videocam</span>
 
-                  <span className={classes.tooltiptext}>Start Video Camera</span>
+                  <span className={classes.tooltiptext}>
+                    Start Video Camera
+                  </span>
                 </button>
-                <button className={classes.tooltip}id="stop-video-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="stop-video-btn"
+                  disabled
+                >
                   <span class="material-icons">videocam_off</span>
 
                   <span className={classes.tooltiptext}>Video Camera Off</span>
                 </button>
                 <br />
-                <button className={classes.tooltip}id="start-audio-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="start-audio-btn"
+                  disabled
+                >
                   <span class="material-icons">mic</span>
 
                   <span className={classes.tooltiptext}>Microphone On</span>
                 </button>
 
-                <button className={classes.tooltip}id="stop-audio-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="stop-audio-btn"
+                  disabled
+                >
                   {" "}
                   <span class="material-icons">mic_off</span>
-
                   <span className={classes.tooltiptext}>Microphone Off</span>
                 </button>
                 <br />
-                <button className={classes.tooltip}id="start-screenshare-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="start-screenshare-btn"
+                  disabled
+                >
                   <span class="material-icons">screen_share</span>
 
                   <span className={classes.tooltiptext}>Start ScreenShare</span>
                 </button>
-                <button className={classes.tooltip}id="stop-screenshare-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="stop-screenshare-btn"
+                  disabled
+                >
                   <span class="material-icons">stop_screen_share</span>
 
                   <span className={classes.tooltiptext}>Stop ScreenShare</span>
@@ -179,12 +201,20 @@ export default class AppContainer extends Component {
 
               {/* <!-- Recording Actions and Status --> */}
               <div id="recording">
-                <button className={classes.tooltip}id="start-recording-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="start-recording-btn"
+                  disabled
+                >
                   <span class="material-icons">radio_button_unchecked</span>
 
                   <span className={classes.tooltiptext}>Start Recording</span>
                 </button>
-                <button className={classes.tooltip}id="stop-recording-btn" disabled>
+                <button
+                  className={classes.tooltip}
+                  id="stop-recording-btn"
+                  disabled
+                >
                   <span class="material-icons">radio_button_checked</span>
 
                   <span className={classes.tooltiptext}>Stop Recording</span>

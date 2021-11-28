@@ -126,48 +126,68 @@ export default class AppContainer extends Component {
             <div style={{ marginTop: "50%" }}>
               <div id="form">
                 <input id="alias-input" value={this.state.meetingCode} hidden />
-                <button id="join-btn" disabled>
+                <button className={classes.tooltip} id="join-btn" disabled>
                   <span class="material-icons">video_call</span>
+                  <span className={classes.tooltiptext}>join video call</span>
                 </button>
-                <button id="leave-btn" disabled>
+
+                <button className={classes.tooltip}id="leave-btn" disabled>
                   <span class="material-icons">call_end</span>
+
+                  <span className={classes.tooltiptext}>Leave video call</span>
                 </button>
                 <label id="label-dolby-voice"></label>
               </div>
 
               {/* <!-- Actions on Video and Screen Share --> */}
               <div id="actions">
-                <button id="start-video-btn" disabled>
+                <button className={classes.tooltip}id="start-video-btn" disabled>
                   <span class="material-icons">videocam</span>
+
+                  <span className={classes.tooltiptext}>Start Video Camera</span>
                 </button>
-                <button id="stop-video-btn" disabled>
+                <button className={classes.tooltip}id="stop-video-btn" disabled>
                   <span class="material-icons">videocam_off</span>
+
+                  <span className={classes.tooltiptext}>Video Camera Off</span>
                 </button>
                 <br />
-                <button id="start-audio-btn" disabled>
+                <button className={classes.tooltip}id="start-audio-btn" disabled>
                   <span class="material-icons">mic</span>
+
+                  <span className={classes.tooltiptext}>Microphone On</span>
                 </button>
 
-                <button id="stop-audio-btn" disabled>
+                <button className={classes.tooltip}id="stop-audio-btn" disabled>
                   {" "}
                   <span class="material-icons">mic_off</span>
+
+                  <span className={classes.tooltiptext}>Microphone Off</span>
                 </button>
                 <br />
-                <button id="start-screenshare-btn" disabled>
+                <button className={classes.tooltip}id="start-screenshare-btn" disabled>
                   <span class="material-icons">screen_share</span>
+
+                  <span className={classes.tooltiptext}>Start ScreenShare</span>
                 </button>
-                <button id="stop-screenshare-btn" disabled>
+                <button className={classes.tooltip}id="stop-screenshare-btn" disabled>
                   <span class="material-icons">stop_screen_share</span>
+
+                  <span className={classes.tooltiptext}>Stop ScreenShare</span>
                 </button>
               </div>
 
               {/* <!-- Recording Actions and Status --> */}
               <div id="recording">
-                <button id="start-recording-btn" disabled>
+                <button className={classes.tooltip}id="start-recording-btn" disabled>
                   <span class="material-icons">radio_button_unchecked</span>
+
+                  <span className={classes.tooltiptext}>Start Recording</span>
                 </button>
-                <button id="stop-recording-btn" disabled>
+                <button className={classes.tooltip}id="stop-recording-btn" disabled>
                   <span class="material-icons">radio_button_checked</span>
+
+                  <span className={classes.tooltiptext}>Stop Recording</span>
                 </button>
                 <p id="record-status" style={{ color: "red" }}></p>
               </div>

@@ -94,6 +94,11 @@ export default class AppContainer extends Component {
           <div style={{ float: "left", width: "80%" }}>
             {/* <!-- Display the list of participants --> */}
             <div id="participants">
+              {/* <!-- Container for the Screen Share --> */}
+              <div
+                style={{ width: "100%", height: "100%" }}
+                id="screenshare-container"
+              ></div>
               <h3>Participants</h3>
               <div
                 style={{
@@ -103,12 +108,22 @@ export default class AppContainer extends Component {
                   justifyContent: "center",
                 }}
                 id="participants-list"
-              ></div>
+              >
+                <p
+                  id="noOne"
+                  style={{
+                    margin: "10%",
+                    fontSize: "24px",
+                    fontWeight: "500",
+                    color: "#4671b5",
+                  }}
+                  hidden={false}
+                >
+                  No one is here yet :(
+                </p>
+              </div>
               {/* <!-- Container for the video streams --> */}
               <div id="video-container"></div>
-
-              {/* <!-- Container for the Screen Share --> */}
-              <div id="screenshare-container"></div>
             </div>
           </div>
 

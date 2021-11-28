@@ -14,6 +14,7 @@ export const initUI = (randomName) => {
   const stopScreenShareBtn = document.getElementById("stop-screenshare-btn");
   const startRecordingBtn = document.getElementById("start-recording-btn");
   const stopRecordingBtn = document.getElementById("stop-recording-btn");
+  const noOne = document.getElementById("noOne");
 
   // Update the login message with the name of the user
   nameMessage.innerHTML = `You are logged in as ${randomName}`;
@@ -65,6 +66,7 @@ export const initUI = (randomName) => {
             stopAudioBtn.disabled = false;
             startScreenShareBtn.disabled = false;
             startRecordingBtn.disabled = false;
+            noOne.hidden = true;
           })
           .catch((err) => console.error(err));
       })
@@ -89,6 +91,7 @@ export const initUI = (randomName) => {
         stopScreenShareBtn.disabled = true;
         startRecordingBtn.disabled = true;
         stopRecordingBtn.disabled = true;
+        noOne.hidden = false;
       })
       .catch((err) => console.error(err));
   };

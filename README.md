@@ -1,4 +1,3 @@
-# Gozzip
 ![image](https://user-images.githubusercontent.com/63864369/143850254-2d63691b-574a-47ff-9636-4b99b10b33ae.png)
 
 Gozzip-

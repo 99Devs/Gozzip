@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Gozzip
+![image](https://user-images.githubusercontent.com/63864369/143850254-2d63691b-574a-47ff-9636-4b99b10b33ae.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Gozzip-
+ Now connecting and meeting up with your friends and colleagues would be just a few clicks away
+Simply create a Conference Code and share it with your friends and you're done. 
+Use gozzip to meet and share and collaborate with people from all around the
+ world.
+ Gozzip crates a hybrid communication experience for each participant using Dolby's cutting-edge communication API'S.
+ experience for every participant.
+Some important features include:
+- Video Sharing
+- Voice Sharing
+- Screen Sharing
+- Conference recording
 
-## Available Scripts
+## Tech Stack-
+- Client: React.js
+- Styling- Semantic Ui
+- API: Dolby Communication Api
+- Deployment: netlify
 
-In the project directory, you can run:
+## Challenges-
+- 
 
-### `yarn start`
+## Future Plans -
+- Implementing webhooks to inform events occuring during the call
+- Chat Integration
+- Storing Chat in a Database
+- Sharing Links of the Conference 
+- Login/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Learnings-
+Working with Dolby's Communication API and integrating it with React.

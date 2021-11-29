@@ -16,10 +16,8 @@ Some important features include:
 - Client: React.js
 - Styling- Semantic Ui
 - API: Dolby Communication Api
-- Deployment: netlify
+- Deployment: Netlify
 
-## Challenges-
-- 
 
 ## Future Plans -
 - Implementing webhooks to inform events occuring during the call

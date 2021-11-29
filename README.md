@@ -6,7 +6,7 @@ Gozzip-
 Simply create a Conference Code and share it with your friends and you're done. 
 Use gozzip to meet and share and collaborate with people from all around the
  world.
- Gozzip crates a hybrid communication experience for each participant using Dolby's cutting-edge communication API'S.
+ Gozzip creates a hybrid communication experience for each participant using Dolby's cutting-edge communication API'S.
  experience for every participant.
 Some important features include:
 - Video Sharing

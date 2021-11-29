@@ -27,5 +27,6 @@ Some important features include:
 - Sharing Links of the Conference 
 - Integrating Authorization/Authentication
 - Improving UI/UX of the webapp
+- Scheduling Conferences 
 
 

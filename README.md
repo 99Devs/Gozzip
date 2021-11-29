@@ -26,5 +26,6 @@ Some important features include:
 - Chat Integration
 - Sharing Links of the Conference 
 - Integrating Authorization/Authentication
+- Improving UI/UX of the webapp
 
 

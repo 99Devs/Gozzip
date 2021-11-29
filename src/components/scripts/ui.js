@@ -67,6 +67,35 @@ export const initUI = (randomName) => {
             startScreenShareBtn.disabled = false;
             startRecordingBtn.disabled = false;
             noOne.hidden = true;
+
+            setInterval(() => {
+              let participants = VoxeetSDK.conference.participants;
+              for (let participant of participants) {
+                VoxeetSDK.conference.isSpeaking(
+                  VoxeetSDK.conference.participants.get(participant[0]),
+                  (isSpeaking) => {
+                    if (isSpeaking) {
+                      let cell = document.getElementById(
+                        `participant-${participant[0]}`
+                      );
+                      if (cell) {
+                        //cell.style.borderColor = "green";
+                        cell.style.boxShadow =
+                          "inset 0px 0px 10px 18px #5be043";
+                      }
+                    } else if (!isSpeaking) {
+                      let cell = document.getElementById(
+                        `participant-${participant[0]}`
+                      );
+                      if (cell) {
+                        cell.style.boxShadow = "";
+                        cell.style.borderColor = "grey";
+                      }
+                    }
+                  }
+                );
+              }
+            }, 100);
           })
           .catch((err) => console.error(err));
       })
